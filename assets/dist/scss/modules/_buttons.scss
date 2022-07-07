@@ -1,0 +1,32 @@
+@use "../base/variables";
+
+.btn {
+  padding: 8px 20px;
+  height: 40px;
+  color: variables.$light-color;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: var(--input-color);
+  cursor: pointer;
+  outline: none;
+  border: 2px solid var(--input-color);
+  transition: 0.4s;
+
+  &:hover {
+    background-color: variables.$light-color;
+    color: var(--input-color);
+  }
+
+  &-half {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    text-transform: none;
+  }
+
+  &-product {
+    &:hover {
+      background-color: variables.$gray-color;
+    }
+  }
+}

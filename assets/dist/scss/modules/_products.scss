@@ -1,0 +1,81 @@
+@use "../base/variables";
+@use "../base/base-mixins";
+
+.products-grid-card {
+  border: 1px solid variables.$gray-color;
+  position: relative;
+  width: 20%;
+  padding: 1rem;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include base-mixins.mobile {
+    width: 90%;
+    margin: 1rem;
+  }
+
+  &:hover {
+    background-color: variables.$gray-color;
+    cursor: pointer;
+
+    .product-price,
+    .rating-box .fa-star,
+    .product-name,
+    .category {
+      color: variables.$light-color;
+    }
+  }
+
+  .label {
+    text-transform: uppercase;
+    border: 1px solid var(--input-color);
+    color: var(--input-color);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 2px 6px;
+  }
+
+  .new {
+    background-color: var(--input-color);
+    color: variables.$light-color;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .category,
+  .product-name,
+  .product-price,
+  .rating-box,
+  .btn {
+    margin-bottom: 1rem;
+  }
+
+  .category,
+  .product-name,
+  .product-price,
+  .fa-star {
+    transition: 0.3s;
+  }
+
+  .category {
+    margin-top: 1rem;
+    text-transform: uppercase;
+    color: variables.$gray-color;
+  }
+
+  .product-name {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+
+  .product-price {
+    color: var(--input-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
